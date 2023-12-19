@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.impute import SimpleImputer
 from sources.utils import save_object
 
 from dataclasses import dataclass
@@ -30,11 +31,13 @@ class DataTransformationn:
 
             num_pipe = Pipeline(
                 steps= [
+                    ('simple_impute',SimpleImputer(strategy= 'mean') ),
                     ('standard_scaler', StandardScaler())
                 ]
             )
             cat_pipe = Pipeline(
                 steps = [
+                    ('simple_impute', SimpleImputer(strategy='constant', fill_value= 'missing')),
                     ('one_hot', OneHotEncoder()),
                     ('scaler', StandardScaler(with_mean=False))
                 ]
