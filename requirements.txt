@@ -6,5 +6,8 @@ scikit-learn
 setuptools
 typing
 datetime
+dataclasses
+dill
+
 
 
