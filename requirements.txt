@@ -8,6 +8,8 @@ typing
 datetime
 dataclasses
 dill
+xgboost
+#-e .
 
 
 

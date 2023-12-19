@@ -1,16 +1,21 @@
 import os 
 import sys 
 
+# Add the project root to the system path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(project_root)
 
+from sources.exception import CustomException
+from sources.logger import logging
+
+# Your other import statements...
 
 from sources.components.data_transformation import DataTransformationn
 from sources.components.data_transformation import DataTransformationConfigg
 
-# from source.components.data_transformation import DataTransformation
-# from source.components.data_transformation import DataTransformationConfig
 
-# from source.components.model_trainer import ModelTrainerConfig
-# from source.components.model_trainer import ModelTrainer
+from sources.components.model_trainer import ModelTrainerConfig
+from sources.components.model_trainer import ModelTrainer
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -62,6 +67,10 @@ if __name__ == '__main__':
      data_trf_obj = DataTransformationn()
      print('la hai la')
      data_trf_obj.data_transformation_object()
+     train_arr, test_arr, _ = data_trf_obj.initiate_data_transform(train_path=train_data, test_path= test_data)
+     modeltrainer = ModelTrainer()
+     print(modeltrainer.initiate_model_trainer(train_array= train_arr, test_array= test_arr))
+
 
 
 
