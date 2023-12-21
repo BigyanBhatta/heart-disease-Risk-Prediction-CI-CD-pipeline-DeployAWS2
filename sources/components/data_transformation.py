@@ -62,7 +62,7 @@ class DataTransformationn:
             logging.info('read train and test data')
             preprocess_obj = self.data_transformation_object()
             logging.info('preprocessor object obtained')
-            target_column = 'Heart_ stroke'
+            target_column = 'Heart__stroke'
             input_feat_train_df = train_df.drop(columns = [target_column])
             target_feat_train_df = train_df[target_column]
 

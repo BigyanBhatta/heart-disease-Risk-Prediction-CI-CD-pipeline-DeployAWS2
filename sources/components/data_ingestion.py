@@ -37,8 +37,13 @@ class DataIngestion:
         logging.info('Enter the data ingestion method or component')
         try:
             df = pd.read_csv('notebook\data\heart_disease.csv')
-            print(df.columns)
 
+            print("Original Columns:", df.columns)
+
+            # Replace spaces with underscores in column names
+            df.columns = [col.replace(' ', '_') for col in df.columns]
+
+            print("Modified Columns:", df.columns)
             logging.info('Read the dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok= True)
