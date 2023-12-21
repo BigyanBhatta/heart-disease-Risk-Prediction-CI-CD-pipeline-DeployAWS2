@@ -8,7 +8,6 @@ typing
 datetime
 dataclasses
 dill
-xgboost
 flask
 #-e .
 

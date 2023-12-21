@@ -8,7 +8,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
-from xgboost import XGBClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
@@ -40,7 +39,6 @@ class ModelTrainer:
                 "Decision Tree": DecisionTreeClassifier(),
                 "KNeighbors Classifier": KNeighborsClassifier(),
                 "Logistic Regression": LogisticRegression(),
-                "XGBClassifier": XGBClassifier(),
                 "Naive Bayes": GaussianNB(),
                 "Support Vector Machine": SVC(),
             }
@@ -68,15 +66,6 @@ class ModelTrainer:
                 "Logistic Regression": {
                     'penalty': ['l1', 'l2', 'elasticnet', 'none'],
                     'C': [0.001, 0.01, 0.1, 1, 10, 100]
-                },
-                "XGBClassifier": {
-                    'learning_rate': [.1, .01, .05, .001],
-                    'n_estimators': [8, 16, 32, 64, 128, 256],
-                    'max_depth': [3, 5, 7, 9],
-                    'min_child_weight': [1, 3, 5, 7],
-                    'subsample': [0.6, 0.7, 0.8, 0.9],
-                    'colsample_bytree': [0.6, 0.7, 0.8, 0.9],
-                    'gamma': [0, 0.1, 0.2, 0.3, 0.4]
                 },
                 "Naive Bayes": {},
                 "Support Vector Machine": {
