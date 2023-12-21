@@ -1,0 +1,137 @@
+<html>
+<body>
+    <div class="login">
+        <h1>Heart Disease/Stroke Possibilities</h1>
+
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <h1>
+                <legend>Heart Disease/Stroke Possibilities</legend>
+            </h1>
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <select class="form-control" name="Gender" placeholder="Select your gender" required>
+                    <option class="placeholder" selected disabled value="">Select your gender</option>
+                    <option value="Male">
+                        Male
+                    </option>
+                    <option value="Female">
+                        Female
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">education</label>
+                <select class="form-control" name="education" placeholder="Select your Qualification" required>
+                    <option class="placeholder" selected disabled value="">Select your Qualification</option>
+                    <option value="uneducated">
+                        uneducated
+                    </option>
+                    <option value="primaryschool">
+                        primaryschool
+                    </option>
+                    <option value="graduate">
+                        graduate
+                    </option>
+                    <option value="post-graduate">
+                        post-graduate
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">prevalentStroke</label>
+                <select class="form-control" name="prevalentStroke" placeholder="had any stroke?" required>
+                    <option class="placeholder" selected disabled value="">had any stroke?</option>
+                    <option value="yes">
+                        yes
+                    </option>
+                    <option value="no">
+                        no
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">age</label>
+                <input class="form-control" type="number" name="age"
+                    placeholder="Enter your age" min='32' max='70' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">cigsPerDay</label>
+                <select class="form-control" name="cigsPerDay" placeholder="how may cigs per day?" required>
+                    <option class="placeholder" selected disabled value="">how many cigs per day?</option>
+                    <option value="0">
+                        0
+                    </option>
+                    <option value="10">
+                        10
+                    </option>
+                    <option value="15">
+                        15
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">sysBP</label>
+                <input class="form-control" type="number" name="sysBP"
+                    placeholder="Enter systolic Blood pressure" min='83.5' max='295' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">diaBP</label>
+                <input class="form-control" type="number" name="diaBP"
+                    placeholder="Enter diastolic Blood pressure" min='48' max='143' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">BMI</label>
+                <input class="form-control" type="number" name="BMI"
+                    placeholder="Enter you BMI(Body Mass Index)" min='15' max='57' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">heartRate</label>
+                <input class="form-control" type="number" name="heartRate"
+                    placeholder="Enter your current heart rate" min='44' max='143' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">glucose</label>
+                <input class="form-control" type="number" name="glucose"
+                    placeholder="Enter you glucose level" min='40' max='394' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">currentSmoker</label>
+                <input class="form-control" type="number" name="currentSmoker"
+                    placeholder="are you a current smoker?" min='0' max='1' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">BPMeds</label>
+                <input class="form-control" type="number" name="BPMeds"
+                    placeholder="Do you take blood pressure medicines?" min='0' max='1' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">prevalentHyp</label>
+                <input class="form-control" type="number" name="prevalentHyp"
+                    placeholder="Do you have hypertension?" min='0' max='1' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">diabetes</label>
+                <input class="form-control" type="number" name="diabetes"
+                    placeholder="Do you have diabetes?" min='0' max='1' />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">totChol</label>
+                <input class="form-control" type="number" name="totChol" placeholder="Enter the cholestrol" min='107' max='696' />
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Heart__stroke: " required />
+            </div>
+        </form>
+
+        <h2>
+            The predicted Heart Stroke is: {{results}}
+        </h2>
+    </div>
+</body>
+</html>
