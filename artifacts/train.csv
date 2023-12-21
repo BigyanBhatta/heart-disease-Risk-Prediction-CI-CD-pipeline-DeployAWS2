@@ -1,4 +1,4 @@
-Gender,age,education,currentSmoker,cigsPerDay,BPMeds,prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose,Heart_ stroke
+Gender,age,education,currentSmoker,cigsPerDay,BPMeds,prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose,Heart__stroke
 Male,40,postgraduate,1,30.0,0.0,no,0,0,205.0,131.0,81.0,23.74,66.0,87.0,No
 Female,57,primaryschool,0,0.0,0.0,no,1,0,250.0,152.5,92.5,32.31,75.0,94.0,No
 Female,47,uneducated,0,0.0,0.0,no,0,0,230.0,123.0,71.0,26.98,83.0,73.0,No
