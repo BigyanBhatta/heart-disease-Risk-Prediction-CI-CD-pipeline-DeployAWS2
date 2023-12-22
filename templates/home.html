@@ -1,11 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .login {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    select.placeholder {
+        color: #aaa;
+    }
+
+    input.btn {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+    </style>
+    <title>Probability of Heart Stroke/Disease</title>
 <html>
 <body>
     <div class="login">
-        <h1>Heart Disease/Stroke Possibilities</h1>
+        <h1>Probability of Heart Stroke/Disease</h1>
 
         <form action="{{ url_for('predict_datapoint')}}" method="post">
             <h1>
-                <legend>Heart Disease/Stroke Possibilities</legend>
+                <legend>Probability of Heart Stroke/Disease</legend>
             </h1>
             <div class="mb-3">
                 <label class="form-label">Gender</label>
@@ -130,7 +187,7 @@
         </form>
 
         <h2>
-            The predicted Heart Stroke is: {{results}}
+            The predicted chances of Heart Stroke is: {{results}}
         </h2>
     </div>
 </body>
