@@ -56,7 +56,9 @@ def load_object(file_path):
             return pickle.load(file_obj)
 
     except Exception as e:
-        raise CustomException(e, sys)
+        # Provide more information about the error
+        error_message = f"Error loading object from file '{file_path}': {str(e)}"
+        raise CustomException(error_message, sys)
     
 
 
